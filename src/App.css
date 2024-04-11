@@ -111,6 +111,44 @@ body,html{
   line-height: 20px; /* 153.846% */
   letter-spacing: 0.122px;
 }
+/* Fix this */
+.shareCont{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shareMedia{
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+#mediaText{
+  margin: 0;
+  z-index: 1;
+  position: relative;
+  color: #9DAEC2;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 153.846% */
+  letter-spacing: 5px;
+}
+#mediaIcons{
+  z-index: 1;
+  position: relative;
+  content: url('assets/mediaIcons.svg');
+}
+#mediaHolder{
+  position: relative;
+  left: -50%;
+  content: url('assets/share_display.svg');
+}
 #share{
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
   content: url('assets/share_icon.svg');
 }

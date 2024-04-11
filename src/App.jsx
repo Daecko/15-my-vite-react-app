@@ -25,7 +25,14 @@ function App() {
                 <p id='date'>28 Jun 2020</p>
               </div>
             </div>
-            <img id='share' alt='share icon' />
+            <div className='shareCont'>
+              <div className='shareMedia'>
+                <p id='mediaText'>SHARE</p>
+                <img id='mediaIcons' alt='facebook,twitter,pinterest icons' />
+                <img id='mediaHolder' alt='media display' />
+              </div>
+              <img id='share' alt='share icon' />
+            </div>
           </div>
         </div>
       </div>
