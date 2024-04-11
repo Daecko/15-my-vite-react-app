@@ -1,0 +1,116 @@
+body,html{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#root {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 260px 355px;
+  justify-content: center;
+  align-items: center;
+  background: #ECF2F8;
+  overflow: hidden;
+}
+.productCont{
+  position: relative;
+  width: 730px;
+  height: 280px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.50);
+}
+#productImage{
+  object-fit: cover;
+  object-position: 100% 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 350px;
+  height: 280px;
+  flex-shrink: 0;
+  border-radius: 10px 0 0 10px;
+  content: url('assets/product-img.png');
+}
+.productInfo{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 285px;
+  margin: 0;
+  width: 445px;
+  height: 280px;
+  flex-shrink: 0;
+  border-radius: 0 10px 10px 0;
+  background: #FFF;
+  box-shadow: 0px 40px 40px -10px rgba(201, 213, 225, 0.50);
+}
+.headline{
+  margin: auto 40px;
+  width: 365px;
+  color: #48556A;
+  font-family: Manrope;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px; /* 140% */
+  letter-spacing: 0.25px;
+}
+.subtitle{
+  margin: auto 40px;
+  width: 365px;
+  color: #6E8098;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 153.846% */
+  letter-spacing: 0.122px;
+}
+.publicationInfo{
+  margin: auto 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profileInfo{
+  display: flex;
+  align-items: center;
+}
+#pfpImage{
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 40px;
+  content: url('assets/pfp.png');
+}
+.profileSideInfo{
+  margin-left: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+#name{
+  margin: 0;
+  color: #48556A;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px; /* 153.846% */
+  letter-spacing: 0.122px;
+}
+#date{
+  margin: 0;
+  color: #9DAEC2;
+  font-family: Manrope;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 153.846% */
+  letter-spacing: 0.122px;
+}
+#share{
+  content: url('assets/share_icon.svg');
+}
