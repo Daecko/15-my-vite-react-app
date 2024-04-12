@@ -113,13 +113,22 @@ body,html{
 }
 /* Fix this */
 .shareCont{
-  position: relative;
   display: flex;
+  position: relative;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.holderCont{
+  display: none;
+  position: absolute;
+  top: -5rem;
+  flex-direction: column;
   align-items: center;
 }
 .shareMedia{
+  margin-top: -4.2rem;
+  gap: 1rem;
   display: flex;
   align-items: center;
   position: relative;
@@ -143,7 +152,6 @@ body,html{
 }
 #mediaHolder{
   position: relative;
-  left: -50%;
   content: url('assets/share_display.svg');
 }
 #share{
@@ -151,4 +159,8 @@ body,html{
   height: 32px;
   flex-shrink: 0;
   content: url('assets/share_icon.svg');
+}
+#share:hover{
+  cursor: pointer;
+  content: url('assets/share_icon_selected.svg');
 }

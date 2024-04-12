@@ -4,7 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [toggle, setToggle] = useState(false)
+  const [shareImg, setShareImg] = useState('assets/share_icon.svg')
 
   return (
     <>
@@ -26,12 +27,18 @@ function App() {
               </div>
             </div>
             <div className='shareCont'>
-              <div className='shareMedia'>
-                <p id='mediaText'>SHARE</p>
-                <img id='mediaIcons' alt='facebook,twitter,pinterest icons' />
+              <div className='holderCont'>
                 <img id='mediaHolder' alt='media display' />
+                <div className='shareMedia'>
+                  <p id='mediaText'>SHARE</p>
+                  <img id='mediaIcons' alt='facebook,twitter,pinterest icons' />
+                </div>
               </div>
-              <img id='share' alt='share icon' />
+              <img id='share' alt='share icon' onClick={()=>{
+                setToggle(!toggle)
+                document.querySelector('.holderCont').style.display = toggle ? 'none' : 'flex'
+                console.log(toggle)
+              }} />
             </div>
           </div>
         </div>
