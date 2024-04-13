@@ -6,7 +6,10 @@ import './App.css'
 function App() {
   const [toggle, setToggle] = useState(false)
   const [shareImg, setShareImg] = useState('assets/share_icon.svg')
-
+  window.onresize = () =>{
+    document.querySelector('.holderCont').style.display = 'none'
+    document.querySelector('.mobileShare').style.display = 'none'
+  }
   return (
     <>
       <div className='productCont'>
@@ -36,10 +39,21 @@ function App() {
               </div>
               <img id='share' alt='share icon' onClick={()=>{
                 setToggle(!toggle)
-                document.querySelector('.holderCont').style.display = toggle ? 'none' : 'flex'
+                if(window.screen.availWidth>768){
+                  document.querySelector('.holderCont').style.display = toggle ? 'none' : 'flex'
+                } else {
+                  document.querySelector('.mobileShare').style.display = 'flex'
+                }
                 console.log(toggle)
               }} />
             </div>
+          </div>
+          <div className='mobileShare'>
+            <p className='mediaText'>SHARE</p>
+            <img className='mediaIcons' alt='facebook,twitter,pinterest icons' />
+            <img id='shareMobile' alt='shareIcon' onClick={() => {
+              document.querySelector('.mobileShare').style.display = 'none'
+            }} />
           </div>
         </div>
       </div>
